@@ -1,0 +1,130 @@
+.heading {
+    color: blue;
+    font-size: 20px;
+    text-align: left;
+}
+
+.title {
+    color: red;
+    font-size: 30px;
+    text-align: center;
+}
+
+.description {
+    color: dark gray;
+    font-size: 15px;
+    border-style: dotted;
+    border-left-style: solid
+    border-color: black;
+    background-color: #FFA500;
+    padding: 10px;
+    text-align: left
+}
+
+.image {
+    width: 200px;
+    position: relative;
+    left: 20px;
+}
+
+.circ1 {
+    stroke: green;
+    fill: white;
+    stroke-width: 50;
+}
+
+.poly1 {
+    }
+
+.chart {
+    width: 100px;
+    height: 100px;
+    align: center;
+    }
+
+body,html{padding:0;margin:0;background:teal;}
+svg{display:block;}
+circle{
+  animation: circles 2s alternate infinite cubic-bezier(.5,0,.5,1);
+  cy:15;
+}
+circle:nth-child(4n+1){fill:darkorange;}
+circle:nth-child(4n+2){fill:gold;}
+circle:nth-child(4n+3){fill:teal;}
+circle:nth-child(4n+4){fill:tomato;}
+
+@for $i from 0 through 45 {
+  circle:nth-child(#{$i}) {
+    animation-delay:-0.15s * $i;
+    cx :61 - ($i * 2);
+    r: 8.5 + (0.5 * $i);
+  }
+}
+
+@keyframes circles { to {transform:translate(5%,50%);} }
+
+#circle-wrapper{
+    position:relative;
+    top:0;
+    left:0;
+    }
+
+    .circle1, .circle2, .circle3, .circle4 {
+    position:absolute;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 32%;
+    height: 32%;
+    padding-bottom: 32%;
+    }
+
+    h1.circle1 h1 {
+    display:inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    }
+
+    .circle1 {
+    background-color:#889fbe;
+    color:000;
+    margin-top:-8%;
+    left:10%;
+    }
+
+    .circle2 {
+    margin-top:10%;
+    color:000;
+    left:24%;
+    background-color:#b1daf6;
+    }
+
+    .circle3 {
+    margin-top:24%;
+    left:10%;
+    background-color:#4f4f51;
+    }
+
+    .circle4 {
+    margin-top:10%;
+    left:-8%;
+    background-color:#56a0d3;
+    }
+
+    .transparent_class {
+    /* IE 8 */
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+
+    /* IE 5-7 */
+    filter: alpha(opacity=70);
+
+    /* Netscape */
+    -moz-opacity: 0.7;
+
+    /* Safari 1.x */
+    -khtml-opacity: 0.7;
+
+    /* Good browsers */
+    opacity: 0.7;
+    }

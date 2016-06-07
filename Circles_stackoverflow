@@ -1,0 +1,10 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+
+<div id="circle-wrapper">
+<div class="circle1 transparent_class"><h1>Two lines <br />&amp;Two lines</h1></div>
+<div class="circle2 transparent_class"><h1>Two lines<br /> Two lines</h1></div>
+<div class="circle3 transparent_class"><h1>Two lines<br />&amp; Two lines</h1></div>
+<div class="circle4 transparent_class "><h1>Two lines<br /> Two lines</h1></div>
+</div><!--close of circle-wrapper-->
